@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/study-abroad",
+  pathPrefix: "/compneuro-summer-schools",
   siteMetadata: {
     title: `Summer Schools in Neuroscience and  Related Fields`,
     description: `to be filled`,
