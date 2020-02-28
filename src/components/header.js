@@ -27,10 +27,10 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
         {`  `}
-        <a href="https://github.com/codeforthailand/study-abroad">
+        <a href="https://github.com/tfburns/compneuro-summer-schools">
           <img 
             style={{verticalAlign: "middle", height: "20px", marginTop: "20px"}}
-            src="https://img.shields.io/github/stars/codeforthailand/study-abroad?style=social"
+            src="https://img.shields.io/github/stars/tfburns/compneuro-summer-schools?style=social"
           />
         </a>
       </div>
