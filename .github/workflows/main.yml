@@ -8,9 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: enriikke/gatsby-gh-pages-action@v2
-      with:
-        deploy-branch: gh-pages
-        access-token: ${{ secrets.ACCESS_TOKEN }}
-        gatsby-args: --prefix-paths
+      - uses: actions/checkout@v2
+      - name: Sync Data
+        run: ./scripts/sync.sh
+      - uses: enriikke/gatsby-gh-pages-action@v2
+        with:
+          deploy-branch: gh-pages
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          gatsby-args: --prefix-paths
