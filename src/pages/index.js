@@ -143,7 +143,7 @@ const IndexPage = () => {
       <br/>
     </div>
     <div>
-      <h3 style={headerStyle}>Application Portal Openning ({availableScholarships.length} schools)</h3>
+      <h3 style={headerStyle}>Call for Application ({availableScholarships.length} schools)</h3>
       <div>
         { 
           availableScholarships.map(r => <SummerSchoolRow key={r.name} data={r}/>)
