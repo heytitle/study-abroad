@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: GitHub Pages Deploy
-      uses: maxheld83/ghpages@v0.2.1
+    - uses: enriikke/gatsby-gh-pages-action@v2
+      with:
+        access-token: ${{ secrets.ACCESS_TOKEN }}
+        gatsby-args: --prefix-paths
