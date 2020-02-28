@@ -128,9 +128,9 @@ const IndexPage = () => {
 
 
   return <Layout>
-    <SEO title="Home" />
+    <SEO title="Home"/>
     <div style={{ marginBottom: "3em" }}>
-      <b>Region
+      <b>Region {` `}
       <select value={region} onChange={(e) => setTypeValue(e.target.value)}>
         <option key="all" value="all">all</option>
         {
@@ -143,7 +143,7 @@ const IndexPage = () => {
       <br/>
     </div>
     <div>
-      <h3 style={headerStyle}>Application Portal Openning ({availableScholarships.length} schools)</h3>
+      <h3 style={headerStyle}>Call for Application ({availableScholarships.length} schools)</h3>
       <div>
         { 
           availableScholarships.map(r => <SummerSchoolRow key={r.name} data={r}/>)

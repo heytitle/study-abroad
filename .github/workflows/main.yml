@@ -1,0 +1,20 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Sync Data
+        run: ./scripts/sync.sh && wc -l ./src/data/summer-schools.csv
+      - name: Print Data
+        run: cat ./src/data/summer-schools.csv
+      - uses: enriikke/gatsby-gh-pages-action@v2
+        with:
+          deploy-branch: gh-pages
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          gatsby-args: --prefix-paths
